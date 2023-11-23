@@ -1,0 +1,244 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: #444;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.nav-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 2rem;
+  
+}
+nav img {
+  float: left;
+  margin: 0rem 7rem 0rem 0rem;
+
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 1rem 0rem;
+  border-radius: 8px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+
+#about {
+  background-color: #f8f8f8; /* Light background for contrast */
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Summary Cards Styles */
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin: 0rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%; /* Adjust based on your layout */
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Chart Container Styles */
+.chart-container {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Data Table Styles */
+.data-table-container {
+  overflow-x: auto; /* For horizontal scrolling on smaller screens */
+}
+
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#dataTable th, #dataTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#dataTable th {
+  background-color: #f2f2f2;
+}
+
+/* Filter Styles */
+.filters {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filters label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #aaa;
+}
+
+#readMoreBtn {
+  background-color: #878787;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#readMoreBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for About Section */
+@media only screen and (max-width: 600px) {
+  #about {
+      padding: 15px;
+  }
+
+  #about h2 {
+      font-size: 18px;
+  }
+
+  #about p {
+      font-size: 14px;
+  }
+  .filters label,
+    .filters select {
+        font-size: 14px;
+    }
+
+    .filters select {
+        padding: 6px 10px;
+    }
+    .summary-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+

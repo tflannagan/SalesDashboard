@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <img src="./assets/logo50.png" alt="img"/>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- Add more navigation items as needed -->
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container" id="dashboard">
+        <!-- Header -->
+        <header>
+            <h1>Sales Dashboard</h1>
+        </header>
+
+        <!-- Filters -->
+        <div class="filters">
+            <label for="productFilter">Choose a product:</label>
+            <select id="productFilter">
+                <option value="All">All Products</option>
+                <option value="Product A">Product A</option>
+                <option value="Product B">Product B</option>
+                <option value="Product C">Product C</option>
+                <option value="Product D">Product D</option>
+                <!-- Add other product options -->
+            </select>
+        </div>
+
+         <!-- Summary Cards -->
+         <div class="summary-cards">
+          <div class="card">
+              <h3>Total Sales</h3>
+              <p id="totalSales">...</p>
+          </div>
+          <div class="card">
+              <h3>Average Sales</h3>
+              <p id="averageSales">...</p>
+          </div>
+          <div class="card">
+            <h3>Top Sales Day</h3>
+            <p id="topSalesDay">...</p>
+        </div>
+          <!-- Additional summary cards -->
+      </div>
+
+        <!-- Chart Containers -->
+        <div class="chart-container">
+          <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+          <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-container">
+          <canvas id="lineChart"></canvas>
+      </div>
+
+       <!-- Data Table -->
+       <div class="data-table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Sales</th>
+                    <th>Product</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be inserted here using JavaScript -->
+            </tbody>
+        </table>
+        <button id="readMoreBtn" onclick="showMoreData()">Read More...</button>
+    </div>
+
+        <!-- About Section -->
+<section id="about">
+  <h2>About the Sales Data</h2>
+  <p>
+      This dashboard presents a comprehensive overview of sales data for the year 2022. The data encompasses sales figures across four major regions: North, South, East, and West. It includes performance metrics for four key products: Product A, Product B, Product C, and Product D.
+  </p>
+  <p>
+      The data is synthesized from multiple sources and represents a realistic simulation of sales trends in a typical retail environment. Trends and patterns identified in this data are instrumental in strategic decision-making, helping to optimize product distribution and marketing strategies.
+  </p>
+  <p>
+      Note: The data presented in this dashboard is illustrative and does not represent real company data.
+  </p>
+</section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 Sales Dashboard</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
