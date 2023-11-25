@@ -278,7 +278,7 @@ footer p {
 }
 
 
-/* Responsive Design for About Section */
+/* Responsive Design Section */
 @media only screen and (max-width: 600px) {
   #about {
       padding: 15px;

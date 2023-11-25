@@ -35,7 +35,6 @@ function updateCharts(data) {
 }
 
 function createBarChart(data) {
-  // Example: Summarize sales by product
   const salesByProduct = data.reduce((acc, curr) => {
     acc[curr.Product] = (acc[curr.Product] || 0) + curr.Sales;
     return acc;
@@ -72,7 +71,6 @@ function createBarChart(data) {
 }
 
 function createPieChart(data) {
-  // Example: Sales distribution by region
   const salesByRegion = data.reduce((acc, curr) => {
     acc[curr.Region] = (acc[curr.Region] || 0) + curr.Sales;
     return acc;
@@ -170,7 +168,7 @@ function updateSummaryCards(data) {
   } ($${topSalesDay.sales.toFixed(2)})`;
 }
 
-let tableLimit = 10; // Initial number of rows to display
+let tableLimit = 10;
 
 function populateDataTable(data) {
   const tableBody = document
@@ -185,7 +183,7 @@ function populateDataTable(data) {
     tableBody.appendChild(tr);
   });
 
-  // Adjust the visibility of the "Read More" button
+  // Adjust visibility of  "Read More" button
   const readMoreBtn = document.getElementById("readMoreBtn");
   if (data.length > tableLimit) {
     readMoreBtn.style.display = "block";
@@ -195,8 +193,8 @@ function populateDataTable(data) {
 }
 
 function showMoreData() {
-  tableLimit = originalData.length; // Update the limit to the total data length
-  populateDataTable(originalData); // Repopulate the table with all data
+  tableLimit = originalData.length; // Update limit to total data length
+  populateDataTable(originalData); // Repopulate table with all data
 }
 
 // Event listener for the product filter
